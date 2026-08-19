@@ -5,14 +5,10 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 
 
-const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:3000")
-    .split(",")
-    .map((o) => o.trim())
-    .concat("https://task-managemen-app-frontend.vercel.app");
-
 app.use(
     cors({
-        origin: allowedOrigins.includes("*") ? true : allowedOrigins,
+        origin: true,
+        credentials: true,
     })
 );
 
