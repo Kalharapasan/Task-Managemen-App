@@ -141,7 +141,7 @@ export default function Home() {
         ) : loadError ? (
           <div className="rounded-xl border border-clay-soft bg-clay-soft px-4 py-3 text-sm text-clay">
             Couldn&apos;t load tasks: {loadError}. Is the API server running at{" "}
-            <code>{process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}</code>?
+            <code>{process.env.NEXT_PUBLIC_API_URL}</code>?
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">

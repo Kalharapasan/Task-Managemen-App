@@ -5,7 +5,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 
 
-const allowedOrigins = (process.env.CORS_ORIGIN || "*")
+const allowedOrigins = (process.env.CORS_ORIGIN)
     .split(",")
     .map((o) => o.trim());
 
