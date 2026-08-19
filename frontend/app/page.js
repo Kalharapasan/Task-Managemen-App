@@ -34,11 +34,9 @@ export default function Home() {
   }
 
   useEffect(() => {
-    
     loadTasks();
   }, []);
 
-  // Auto-dismiss the toast after a few seconds
   useEffect(() => {
     if (!toast) return;
     const timer = setTimeout(() => setToast(null), 3000);

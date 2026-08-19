@@ -1,19 +1,24 @@
+// Single source of truth for the three statuses and how they look.
+// Any component that needs status colors/labels reads from here.
 export const STATUSES = ["Pending", "In Progress", "Completed"];
 
 export const STATUS_STYLES = {
   Pending: {
-    dot: "bg-amber-500",
-    border: "border-t-amber-500",
-    badge: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+    dot: "bg-amber",
+    text: "text-amber",
+    badge: "bg-amber-soft text-amber",
+    border: "border-t-amber",
   },
   "In Progress": {
-    dot: "bg-blue-500",
-    border: "border-t-blue-500",
-    badge: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+    dot: "bg-signal",
+    text: "text-signal",
+    badge: "bg-signal-soft text-signal",
+    border: "border-t-signal",
   },
   Completed: {
-    dot: "bg-emerald-500",
-    border: "border-t-emerald-500",
-    badge: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+    dot: "bg-leaf",
+    text: "text-leaf",
+    badge: "bg-leaf-soft text-leaf",
+    border: "border-t-leaf",
   },
 };

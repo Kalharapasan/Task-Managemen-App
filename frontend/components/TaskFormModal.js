@@ -15,9 +15,7 @@ function toFormState(initialTask) {
   };
 }
 
-// Note: the parent remounts this component (via a `key`) whenever it is
-// opened for a different task, so the form fields below only ever need to
-// be initialized once - no effect required to "reset" them.
+
 export default function TaskFormModal({ open, onClose, onSubmit, initialTask }) {
   const [form, setForm] = useState(() => toFormState(initialTask));
   const [error, setError] = useState("");
